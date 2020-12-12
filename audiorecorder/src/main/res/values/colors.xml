@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gray_text">#2C404C</color>
+    <color name="gray_disabled">#E2E8ED</color>
+    <color name="red_enabled">#B00020</color>
+    <color name="green_done">#2CA18C</color>
+</resources>

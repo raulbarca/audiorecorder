@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnMic"
+        style="@style/audio_icon_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_mic"
+        app:tint="@color/audio_icon_color_selector"
+        tools:tint="@color/red_enabled" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnStop"
+        style="@style/audio_icon_primary"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_stop"
+        app:tint="@color/audio_icon_color_selector"
+        tools:tint="@color/red_enabled"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/playerSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/audio_seekbar_margin"
+        android:layout_marginEnd="@dimen/audio_seekbar_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnMic" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCurrentPosition"
+        style="@style/audio_seekbar_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/audio_seekbar_time_margin"
+        app:layout_constraintStart_toStartOf="@id/playerSeekBar"
+        app:layout_constraintTop_toBottomOf="@id/playerSeekBar"
+        tools:text="0:00" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDuration"
+        style="@style/audio_seekbar_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/audio_seekbar_time_margin"
+        app:layout_constraintEnd_toEndOf="@id/playerSeekBar"
+        app:layout_constraintTop_toBottomOf="@id/playerSeekBar"
+        tools:text="0:20" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnPlay"
+        style="@style/audio_icon_secondary"
+        android:layout_marginBottom="@dimen/audio_bottom_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnDone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCurrentPosition"
+        app:srcCompat="@drawable/ic_play"
+        app:tint="@color/audio_icon_color_selector"
+        tools:tint="@color/red_enabled" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnPausePlaying"
+        style="@style/audio_icon_secondary"
+        android:layout_marginBottom="@dimen/audio_bottom_margin"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnDone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCurrentPosition"
+        app:srcCompat="@drawable/ic_pause"
+        app:tint="@color/audio_icon_color_selector"
+        tools:tint="@color/red_enabled"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnDone"
+        style="@style/audio_icon_secondary"
+        android:layout_marginBottom="@dimen/audio_bottom_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/btnPlay"
+        app:layout_constraintTop_toBottomOf="@id/tvCurrentPosition"
+        app:srcCompat="@drawable/ic_done"
+        app:tint="@color/audio_icon_done_color_selector"
+        tools:tint="@color/green_done" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

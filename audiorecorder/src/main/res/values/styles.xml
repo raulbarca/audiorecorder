@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="audio_icon_primary">
+        <item name="android:layout_width">@dimen/audio_primary_icon_size</item>
+        <item name="android:layout_height">@dimen/audio_primary_icon_size</item>
+        <item name="android:padding">@dimen/audio_primary_icon_padding</item>
+        <item name="android:background">@drawable/audio_rounded_background</item>
+    </style>
+
+    <style name="audio_icon_secondary">
+        <item name="android:layout_width">@dimen/audio_secondary_icon_size</item>
+        <item name="android:layout_height">@dimen/audio_secondary_icon_size</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="audio_seekbar_text">
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/audio_seekbar_text_size</item>
+        <item name="android:color">@color/gray_text</item>
+    </style>
+</resources>
