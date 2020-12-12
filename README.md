@@ -1,4 +1,6 @@
 # audiorecorder
+[![Release](https://jitpack.io/v/raulbarca/audiorecorder.svg)](https://jitpack.io/#raulbarca/audiorecorder)
+
 Android kotlin audio recorder
 
 <pre>
