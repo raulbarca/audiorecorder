@@ -1,6 +1,7 @@
 package com.github.raulbarca.audiorecorder
 
 import android.app.Activity
+import android.content.Intent
 import android.media.MediaMetadataRetriever
 import android.media.MediaPlayer
 import android.media.MediaRecorder
@@ -178,11 +179,8 @@ open class AudioRecorderActivity : AppCompatActivity() {
     }
 
     open fun onFinishRecording() {
-        intent.putExtra(
-            BUNDLE_RECORDED_AUDIO_FILENAME,
-            filename
-        )
-        setResult(Activity.RESULT_OK)
+        val data = Intent().putExtra(BUNDLE_RECORDED_AUDIO_FILENAME, filename)
+        setResult(Activity.RESULT_OK, data)
         finish()
     }
 
